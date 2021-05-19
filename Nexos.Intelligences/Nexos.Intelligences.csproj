@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nexos.Repositories\Nexos.Repositories.csproj" />
+    <ProjectReference Include="..\Nexus.DataAccess\Nexus.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>

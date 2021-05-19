@@ -1,0 +1,49 @@
+﻿@page
+@model Nexos.Web.Pages.EditorialModel
+
+@{
+    ViewData["Title"] = "Editorial";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Editorial</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Editorial.Name" class="control-label"></label>
+                <input asp-for="Editorial.Name" class="form-control" />
+                <span asp-validation-for="Editorial.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Editorial.Address" class="control-label"></label>
+                <input asp-for="Editorial.Address" class="form-control" />
+                <span asp-validation-for="Editorial.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Editorial.Phone" class="control-label"></label>
+                <input asp-for="Editorial.Phone" class="form-control" />
+                <span asp-validation-for="Editorial.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Editorial.Email" class="control-label"></label>
+                <input asp-for="Editorial.Email" class="form-control" />
+                <span asp-validation-for="Editorial.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
